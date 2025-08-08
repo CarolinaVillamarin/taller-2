@@ -1,0 +1,15 @@
+meta {
+  name: consultar productos por ID
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3010/proyectos/02
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

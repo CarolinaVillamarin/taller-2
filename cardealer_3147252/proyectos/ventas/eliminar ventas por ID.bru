@@ -1,0 +1,15 @@
+meta {
+  name: eliminar ventas por ID
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3010/ventas/10
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

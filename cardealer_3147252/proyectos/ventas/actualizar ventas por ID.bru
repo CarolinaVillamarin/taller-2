@@ -1,0 +1,15 @@
+meta {
+  name: actualizar ventas por ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3010/ventas/08
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
