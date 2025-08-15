@@ -14,12 +14,14 @@ export class VentasController {
 
   @Get()
   findAll() {
-    return `aqui se consultan las ventas`
+    return this.
+    ventasService.
+    findAll()
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return `aqui se consultan las ventas por id:${id}`
+    return this.ventasService.findOne(+id)
   }
 
   @Patch(':id')
@@ -29,6 +31,10 @@ export class VentasController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return `aqui se eliminan las ventas por id:${id}`
+    this.ventasService.remove(+id);
+    return {
+      success : true,
+      venta_eliminada: id
+    }
   }
 }
